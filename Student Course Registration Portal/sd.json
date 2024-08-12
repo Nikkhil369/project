@@ -1,0 +1,17 @@
+{
+  "teachers": [
+    "sdt1",
+    "sdt2",
+    "sdt3"
+  ],
+  "slots": [
+    "l2",
+    "l3",
+    "l4"
+  ],
+  "currentSeats": [
+    5,
+    5,
+    5
+  ]
+}

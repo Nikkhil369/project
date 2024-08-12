@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    "mlt1",
+    "mlt2"
+  ],
+  "slots": [
+    "slot1",
+    "slot2"
+  ],
+  "currentSeats": [
+    5,
+    5
+  ]
+}

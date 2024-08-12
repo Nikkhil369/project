@@ -1,0 +1,12 @@
+html
+head
+    title Action
+body
+    br
+    br
+    form(method="POST", action="/action/add", enctype="multipart/form-data")
+        button(type="submit", name="ml") Add Course
+    form(method="POST", action="/action/delete", enctype="multipart/form-data")
+        button(type="submit", name="sd") Delete Course
+    form(method="POST", action="/action/view", enctype="multipart/form-data")
+        button(type="submit", name="sd") View registered Courses

@@ -1,0 +1,18 @@
+html
+head
+body
+    h1="The Courses that you have registered for are:"
+    br
+    br
+    h1=added
+    br
+    br
+    br
+    h2="Enter the course code of the subject which you want to remove"
+    h2="Course Codes:"
+    h3="Machine Learning: ml"
+    h3="Software Development: sd"
+    form(method="POST", action="/remove", enctype="multipart/form-data")
+        label Enter the course code here &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        input(name="subj")
+        button(type="submit") Remove
