@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">  <title>Blog</title>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+        font-size: 2em;  text-align: center;  }
+
+    h2 {
+        color: green;
+        display: none;  }
+
+    h3 {
+        color: red;
+        display: none;  }
+
+    table {
+        width: 80%;
+        margin: 0 auto;  border-collapse: collapse;
+        border: 1px solid #ddd;  }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;  }
+
+    img {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 50%;  }
+
+    .blog-description {  font-size: 0.9em;  }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        margin: 10px auto;  display: block;  }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    a button {
+        background-color: #333;
+    }
+
+    a button:hover {
+        background-color: #555;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            var h2Elements = document.querySelectorAll('h2, h3');
+            h2Elements.forEach(function (element) {
+                element.style.display = 'none';
+            });
+        }, 1000);
+    });
+  </script>
+</head>
+
+<body>
+<h2 th:text="${pass}"></h2>
+  <h3 th:text="${fail}"></h3>
+<h1>Blog</h1>
+<table>
+  <tr>
+    <th style="width: 40%">Title</th>  <th style="width: 20%">Picture</th>  <th style="width: 40%">Description</th>  </tr>
+  <tr th:each="blog:${blogs}">
+    <td th:text="${blog.title}"></td>
+    <td><img th:src="@{'data:image/jpeg;base64,'+${blog.generateBase64Image()}}"></td>
+    <td class="blog-description" th:text="${blog.description}"></td>
+  </tr>
+</table>
+
+<a href="/"><button>Back</button></a>
+</body>
+
+</html>
