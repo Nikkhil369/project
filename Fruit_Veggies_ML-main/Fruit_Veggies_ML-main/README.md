@@ -1,0 +1,1 @@
+This project is designed to recognize various fruits and vegetables from images using a Convolutional Neural Network (CNN) implemented with TensorFlow/Keras. The trained model can predict the type of fruit or vegetable in an image. Additionally, a web application is built using Streamlit to provide an interactive interface for users to upload images and receive predictions.
